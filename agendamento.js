@@ -10,10 +10,13 @@
 })();
 const express = require("express");
 const app = express();
+
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs')
 var path = require('path');
 app.set('views', path.join(__dirname, '/view/' ));
+app.use(express.static(path.join(__dirname, '/view/')));
+app.use(express.static('view'));
 bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 var consign = require('consign');
