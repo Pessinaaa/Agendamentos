@@ -23,23 +23,18 @@
   </head>
   <body style="width:100%;">      
         <section> 
-                <h1 id="titulo1_cadastro">Cadastro Paciente!</h1>
-            <form name="cadastro" id="cadastro" method="post" action="/cadastro/paciente/salvar">
+                <h1 id="titulo1_cadastro">Criar consulta</h1>
+            <form name="cadastro" id="cadastro" method="post" action="/cadastro/consulta/salvar">
                 <div id="cadastro_left">
-                            <label for="nome" class="required"> Nome</label><br>
-                            <input type="text" name="nome" id="nome" placeholder="Nome Completo" required>
+                            <label for="data" class="required"> data</label><br>
+                            <input type="text" name="data" id="data" placeholder="Data" required>
                             
-                            <label for="cpf" class="required"><br>CPF</label><br>
-                            <input type="number" name="cpf" id="cpf" placeholder="Somente números" required>
-                            
-                            <label for="rg" class="required"><br>RG</label><br>
-                            <input type="number" name="rg" id="rg" placeholder="Somente números" required>
+                            <label for="crm médico" class="required"><br>CRM</label><br>
+                            <input type="number" name="crm" id="crm" placeholder="Somente números" required>
                   </div>
                 <div id="cadastro_right">
-                        <label for="telefone"> Telefone</label><br>
-                        <input type="tel" name="telefone" id="celular" placeholder="Somente números">
-                        <label for="endereco"> Endereço</label><br>
-                        <input type="text" name="endereco" id="endereco" placeholder="Logradouro, número">
+                        <label for="cpf"> CPF paciente</label><br>
+                        <input type="tel" name="cpf" id="cpf_paciente" placeholder="Somente números">
                         <br>
                         <input type="submit" name="salvar">
                 </div>

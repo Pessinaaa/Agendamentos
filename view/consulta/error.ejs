@@ -7,7 +7,7 @@
         <meta name="Description" content="Home">
         <meta name="Keywords" content="Home, html, web">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../estilo.css">
+        <link rel="stylesheet" href="/estilo.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -36,40 +36,16 @@
        </header>
         <!--Inicio Conteudo-->
         <section> 
-         
-                <h1 id="titulo1_cadastro">Lista de Médico!</h1>
-             
-                  <table>
-                    <tbody>
-                      <th>nome </th>
-                      <th>CRM </th>
-                      <th>Excluir </th>
-                      <th>Editar </th>
-                    </tbody>
-                    <% docs.forEach(function(medico){ %>
-                      <tr>
-                        <td><%= medico.dataValues.nome %></td>
-                        <td><%= medico.dataValues.crm %></td>
-                        <td>
-                          <input type="button" onclick="location.href='/delete/medico/<%= medico.dataValues.crm %>'" 
-                           value="delete" />
-                          </td>
-                           <td>
-                           <input type="button" onclick="location.href='/edit/medico/<%= medico.dataValues.crm %>'" 
-                           value="editar" />
-                          </td>
-                      </tr>
-                    <% }) %>
-                  </table>
-                
-                  <br>
-                  <br>
-                  <br>
-                  <form name="cadastro">
-                  <br>
-                  <input type="button" onclick="location.href='/cadastro/medico'"  value="Novo médico" />
-                  <br><br>
-                </form>
+          <form name="cadastro">
+          <h1>Mensagem de erro: <%= mensagem %></h1>
+          
+           <br>
+           <br>
+           <input type="button" onclick="location.href='/cadastro'"  value="Novo médico" />
+           <input type="button" onclick="location.href='/lista/medico'"  value="Lista de médicos" />
+            <br>
+            <br>
+          </form>
            </section>
        <!--Rodapé-->
        <footer id="rodape">

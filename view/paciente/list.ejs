@@ -53,11 +53,11 @@
                         <td><%= paciente.dataValues.cpf %></td>
                         <td><%= paciente.dataValues.rg %></td>
                         <td>
-                          <input type="button" onclick="location.href='/delete/paciente/<%= paciente.dataValues.crm %>'" 
+                          <input type="button" onclick="location.href='/delete/paciente/<%= paciente.dataValues.cpf %>'" 
                            value="delete" />
                           </td>
                            <td>
-                           <input type="button" onclick="location.href='/edit/paciente/<%= paciente.dataValues.crm %>'" 
+                           <input type="button" onclick="location.href='/edit/paciente/<%= paciente.dataValues.cpf %>'" 
                            value="editar" />
                           </td>
                       </tr>
@@ -69,7 +69,7 @@
                   <br>
                   <form name="cadastro">
                   <br>
-                  <input type="button" onclick="location.href='/cadastro'"  value="Novo paciente" />
+                  <input type="button" onclick="location.href='/cadastro/paciente'"  value="Novo paciente" />
                   <br><br>
                 </form>
            </section>

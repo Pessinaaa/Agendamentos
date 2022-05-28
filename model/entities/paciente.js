@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const database = require('../services/bd');
+const Consulta = require('./consulta');
 const Paciente = database.define('paciente', {
     cpf: {
         type: Sequelize.INTEGER,
@@ -15,4 +16,6 @@ const Paciente = database.define('paciente', {
     endereco: Sequelize.STRING,
     telefone: Sequelize.STRING
 })
+Paciente.hasMany(Consulta, {foreignKey:
+    {name: 'id_paciente', allowNull: false}})
 module.exports = Paciente;

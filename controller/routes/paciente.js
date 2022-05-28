@@ -1,7 +1,7 @@
 const pacienteRepository =require('../../model/repositories/paciente'); 
 module.exports = function (app){
 
-app.get("/cadastro",  function(req, res){
+app.get("/cadastro/paciente",  function(req, res){
        res.render('paciente/cadastro');
 });
 
@@ -56,7 +56,7 @@ app.get('/edit/paciente/:id', async (req, res, next) => {
 app.get('/lista/paciente', async (req, res, next) => {
   try {
     const docs = await pacienteRepository.buscarTodosPacientes();
-    res.render('paciente/list', { mensagem: 'Lista de Médicos', docs });
+    res.render('paciente/list', { mensagem: 'Lista de Pacientes', docs });
   } catch (err) {
     next(err);
   }

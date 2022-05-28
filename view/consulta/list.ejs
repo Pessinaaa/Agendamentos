@@ -37,25 +37,27 @@
         <!--Inicio Conteudo-->
         <section> 
          
-                <h1 id="titulo1_cadastro">Lista de Médico!</h1>
+                <h1 id="titulo1_cadastro">Lista de Consulta!</h1>
              
                   <table>
                     <tbody>
-                      <th>nome </th>
+                      <th>data </th>
                       <th>CRM </th>
+                      <th>CPF </th>
                       <th>Excluir </th>
                       <th>Editar </th>
                     </tbody>
-                    <% docs.forEach(function(medico){ %>
+                    <% docs.forEach(function(consulta){ %>
                       <tr>
-                        <td><%= medico.dataValues.nome %></td>
-                        <td><%= medico.dataValues.crm %></td>
+                        <td><%= consulta.dataValues.data %></td>
+                        <td><%= consulta.dataValues.id_medico %></td>
+                        <td><%= consulta.dataValues.id_paciente %></td>
                         <td>
-                          <input type="button" onclick="location.href='/delete/medico/<%= medico.dataValues.crm %>'" 
+                          <input type="button" onclick="location.href='/delete/consulta/<%= consulta.dataValues.id %>'" 
                            value="delete" />
                           </td>
                            <td>
-                           <input type="button" onclick="location.href='/edit/medico/<%= medico.dataValues.crm %>'" 
+                           <input type="button" onclick="location.href='/edit/consulta/<%= consulta.dataValues.id %>'" 
                            value="editar" />
                           </td>
                       </tr>
@@ -67,7 +69,7 @@
                   <br>
                   <form name="cadastro">
                   <br>
-                  <input type="button" onclick="location.href='/cadastro/medico'"  value="Novo médico" />
+                  <input type="button" onclick="location.href='/cadastro/consulta'"  value="Nova consulta" />
                   <br><br>
                 </form>
            </section>

@@ -1,7 +1,7 @@
 const medicoRepository =require('../../model/repositories/medico'); 
 module.exports = function (app){
 
-app.get("/cadastro",  function(req, res){
+app.get("/cadastro/medico",  function(req, res){
        res.render('medico/cadastro');
 });
 
