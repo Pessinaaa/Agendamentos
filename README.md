@@ -1,2 +1,2 @@
 # Agendamentos
-Atividade do curso de backend
+Atividade do curso "Aprendendo backend e API REST"
