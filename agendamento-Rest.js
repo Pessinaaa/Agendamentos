@@ -6,4 +6,4 @@ app.use(express.urlencoded({extend: true}));
 app.use(express.json());
 app.listen(8081, function(){
     console.info("API funcionando");
-})
+});
